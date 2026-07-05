@@ -91,30 +91,26 @@ main{
    BOTONES
 =========================== */
 
-.boton-tabla,
-.boton-opinion{
-    display:inline-block;
-    background:#8b4513;
-    color:white;
-    padding:15px 30px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-    margin-top:20px;
+.boton-tabla{
+    display: inline-block;
+    background-color: #8B4513;
+    color: white;
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.boton-tabla:hover,
-.boton-opinion:hover{
-    background:#5a3315;
+.boton-tabla:hover{
+    background-color: #A0522D;
+    transform: scale(1.05);
 }
-
-#btn-opinion{
-    border:none;
-    background:none;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
+.boton-tabla{
+    text-align: center;
+    margin: 40px 0;
 }
 
 /* ===========================
@@ -226,8 +222,26 @@ h3{
 =========================== */
 
 .opinion{
-    text-align:center;
-    margin:60px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.boton-opinion{
+    display: inline-block;
+    background-color: #8B4513;
+    color: white;
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.boton-opinion:hover{
+    background-color: #A0522D;
+    transform: scale(1.05);
 }
 
 /* ===========================
