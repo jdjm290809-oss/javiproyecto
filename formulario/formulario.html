@@ -1,150 +1,28 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Panadería - Déjanos tu opinión</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1400&q=80");
-    background-size:cover;
-    background-position:center;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.contenedor{
-    background:#fffaf2;
-    width:450px;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
-}
-
-h1{
-    text-align:center;
-    color:#6d4c41;
-    margin-bottom:10px;
-}
-
-p{
-    text-align:center;
-    color:#8d6e63;
-    margin-bottom:25px;
-}
-
-label{
-    display:block;
-    margin-bottom:8px;
-    color:#5d4037;
-    font-weight:bold;
-}
-
-input,
-textarea{
-    width:100%;
-    padding:12px;
-    border:2px solid #d7ccc8;
-    border-radius:8px;
-    margin-bottom:18px;
-    font-size:15px;
-    transition:.3s;
-}
-
-input:focus,
-textarea:focus{
-    outline:none;
-    border-color:#d4a373;
-}
-
-textarea{
-    resize:none;
-    height:120px;
-}
-
-button{
-    width:100%;
-    padding:14px;
-    border:none;
-    border-radius:8px;
-    background:#c68642;
-    color:white;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-}
-
-button:hover{
-    background:#8b5e34;
-    transform:scale(1.02);
-}
-
-footer{
-    text-align:center;
-    margin-top:20px;
-    color:#8d6e63;
-    font-size:13px;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
 </head>
-
 <body>
 
-<div class="contenedor">
+    <h1>Formulario de Contacto</h1>
 
-<h1>🥖 Panadería Delicias</h1>
+    <form name="clientes" method="POST" data-netlify="true">
 
-<p>Tu opinión nos ayuda a hornear una mejor experiencia.</p>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
 
-<form action="http://localhost:3000/guardar" method="POST">
+        <label for="correo">Correo:</label><br>
+        <input type="email" id="correo" name="correo" required><br><br>
 
-<label>Nombre</label>
-<input
-type="text"
-name="nombre"
-placeholder="Escribe tu nombre"
-required>
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="5" cols="30" required></textarea><br><br>
 
-<label>Correo electrónico</label>
-<input
-type="email"
-name="correo"
-placeholder="correo@ejemplo.com"
-required>
+        <button type="submit">Enviar</button>
 
-<label>Cuéntanos tu opinión</label>
-<textarea
-name="mensaje"
-placeholder="¿Qué te parecieron nuestros panes, pasteles o atención?"
-required></textarea>
-
-<button type="submit">
-Enviar opinión
-</button>
-
-</form>
-
-<footer>
-❤️ Gracias por ayudarnos a mejorar cada día.
-</footer>
-
-</div>
+    </form>
 
 </body>
 </html>
-```
-
