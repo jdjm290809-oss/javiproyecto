@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Contacto</title>
 </head>
+
 <body>
 
     <h1>Formulario de Contacto</h1>
 
-    <form name="clientes" method="POST" data-netlify="true" action="/gracias.html">
+    <form name="clientes" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+
+        <input type="hidden" name="form-name" value="clientes">
+
+        <p hidden>
+            <label>
+                No llenar:
+                <input name="bot-field">
+            </label>
+        </p>
+
         <label for="nombre">Nombre:</label><br>
         <input type="text" id="nombre" name="nombre" required><br><br>
 
@@ -22,6 +33,17 @@
         <button type="submit">Enviar</button>
 
     </form>
+
+
+    <script>
+        const formulario = document.querySelector("form");
+
+        formulario.addEventListener("submit", function(){
+            setTimeout(function(){
+                window.location.href = "/gracias.html";
+            }, 1000);
+        });
+    </script>
 
 </body>
 </html>
