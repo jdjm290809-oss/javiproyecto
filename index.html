@@ -10,22 +10,26 @@
 </head>
 
 <body>
-    <form name="clientes" method="POST" data-netlify="true">
-    
+   <div style="display:none;">
+
+<form name="clientes" method="POST" data-netlify="true">
+
     <input type="hidden" name="form-name" value="clientes">
 
     <label>Nombre:</label>
-    <input type="text" name="nombre" required>
+    <input type="text" name="nombre">
 
     <label>Correo:</label>
-    <input type="email" name="correo" required>
+    <input type="email" name="correo">
 
     <label>Mensaje:</label>
-    <textarea name="mensaje" required></textarea>
+    <textarea name="mensaje"></textarea>
 
     <button type="submit">Enviar</button>
 
 </form>
+
+</div>
 
 <header class="encabezado">
 
